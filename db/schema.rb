@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2021_06_23_223546) do
     t.string "status", null: false
     t.text "title", null: false
     t.text "description", null: false
-    t.string "type", null: false
+    t.string "ticket_type", null: false
     t.integer "effort", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
