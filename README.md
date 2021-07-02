@@ -11,7 +11,7 @@ classes
         title 
         description
         type: 
-            dropdown: 
+            radio: 
                 feature 
                 bug 
                 chore
@@ -31,28 +31,40 @@ classes
     
 
 
+instructions for backend setup 
 
-# README
+rails g resource Ticket create columns and add vlaidations    null: false 
+rails g resource Ticket 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+add relationships to models  add validations   validates_presence_of :content, :ticket_id
 
-Things you may want to cover:
 
-* Ruby version
+add seeds
+seed db
 
-* System dependencies
+test in console to see if relationships are working 
 
-* Configuration
+CORS 
+uncommment gem 'rack-cors'
+add gem 'active_model_serializers'
+add gem 'pry'
+bundle install 
+uncomment cors in cors file. change example.com to *
 
-* Database creation
+SERIALIZER 
+rails g serializer Ticket 
+rails g serializer Comment 
+add columns to each serializer 
 
-* Database initialization
+CONTROLLERS 
+add index, create, update, destroy
+comments is nested 
+render json: ....
 
-* How to run the test suite
+ROUTES 
+change routes, make comments nested 
 
-* Services (job queues, cache servers, search engines, etc.)
+run rails server and check if json comes through
 
-* Deployment instructions
 
-* ...
+

@@ -2,12 +2,16 @@ class CommentsController < ApplicationController
 
     def index 
         ticket = Ticket.find(params[:ticket_id])
-        render json: ticket.comments
+        comments = ticket.comments
+        render json: comments
     end 
 
     def create 
-        comment = Comment.create(comment_params)
-        render json: comment
+        comment = Comment.new(comment_params)
+
+        if comment.save
+            render json: comment
+        end
     end 
 
     def update 

@@ -10,6 +10,7 @@ ticket_one = Ticket.create(status: 'unscheduled', title: 'New button', descripti
 ticket_two = Ticket.create(status: 'ready for development', title: 'add css', description: 'ddddddddd', ticket_type: 'feature', effort: 2)
 ticket_three = Ticket.create(status: 'ready for review', title: 'navbar', description: 'aaaaaaa', ticket_type: 'chore', effort: 1)
 
+
 comment_one = Comment.create( content: '1st comment', ticket_id: ticket_one.id)
 comment_two = Comment.create( content: '2nd comment', ticket_id: ticket_two.id)
 comment_three = Comment.create( content: '3rd comment', ticket_id: ticket_three.id)
