@@ -1,4 +1,4 @@
 class TicketSerializer < ActiveModel::Serializer
   has_many :comments
-  attributes :id, :status, :title, :description, :ticket_type, :effort
+  attributes :id, :status, :title, :description, :ticket_type, :effort, :priority
 end
